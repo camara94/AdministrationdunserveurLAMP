@@ -62,10 +62,11 @@ L'exemple de l'hôte virtuel offert se présente de la manière suivante :
         4. #    DocumentRoot /www/docs/dummy-host.example.com
         5. #    ServerName dummy-host.example.com
         6. #    ErrorLog logs/dummy-host.example.com-error_log
-        7. #    CustomLog logs/dummy-host.example.com-access_log common
-        8. # les valeurs possible sont: debug, info, notice, warn, error, crit, alert, emerg
-        9. # LogLevel warn
-        10. # &lt;/VirtualHost&gt;
+        8. #    #les valeurs possible sont: debug, info, notice, warn, error, crit, alert, emerg
+        9. #    LogLevel warn
+        10. #   SetEnvIfRemote_Addr "127\.0\.0\.1" nolog
+        11. #   CustomLog ${APACHE_LOG_DIR}/com-access_log.log combined env=!nolog
+        12. #&lt;/VirtualHost&gt;
     </pre>
 </code>
 
@@ -76,6 +77,16 @@ L'exemple de l'hôte virtuel offert se présente de la manière suivante :
 5. **ServerName** bref le nom de domaine.
 6. **ErrorLog** le chemin de votre fichier log
 7. **LogLevel** les niveaux d'erreur qui vont être enrégistré dans lefichier de log.
+8. la ligne 10 &amp; 11 pour dire si l'adresse IP du client est 127.0.0.1 pas de log
+9. Pour que tout fonctionne on doit crée les dossiers **docs** &amp; **dummy-host** s'ils n'existent pas donc on tape les commande suivantes:
+    
+    <code>
+        <pre>
+            mkdir docs
+            cd docs
+            mkdir dummy-host
+        </pre>
+    </code>
 
 Pour allez plus loin
 [Hôte virtuel sécurisé](http://httpd.apache.org/docs/2.0/ssl/ssl_intro.html)
