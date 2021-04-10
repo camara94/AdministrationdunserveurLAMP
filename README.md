@@ -48,3 +48,38 @@ Pour modification **httpd.conf**, je crée et copie d'abord son contenu dans le 
 ### pour mieux gérer son serveur ubuntu
 on va installer etckeeper et logwatch au fait etckeeper, nous permet de versionner l'etat de notre serveur ce qui nous permet de revenir à l'etat precedent à tout moment c'est à dire on pourra faire des commit vraiment c'est outil très pratique
 <code>apt install etckeeper</code>
+
+## Pour la création d'un hôte virtuel
+La meilleure façon de créer un hôte virtuel basé sur le nom consiste à utiliser le conteneur d'hôte virtuel fourni à titre d'exemple dans **httpd.conf**.
+
+L'exemple de l'hôte virtuel offert se présente de la manière suivante :
+
+<code>
+    <pre>
+        1. #NameVirtualHost *:80
+        2. #&lt;VirtualHost  *:80&gt;
+        3. #    ServerAdmin webmaster@dummy-host.example.com
+        4. #    DocumentRoot /www/docs/dummy-host.example.com
+        5. #    ServerName dummy-host.example.com
+        6. #    ErrorLog logs/dummy-host.example.com-error_log
+        7. #    CustomLog logs/dummy-host.example.com-access_log common
+        8. # les valeurs possible sont: debug, info, notice, warn, error, crit, alert, emerg
+        9. # LogLevel warn
+        10. # &lt;/VirtualHost&gt;
+    </pre>
+</code>
+
+1. décommentez la ligne NameVirtualHost en retirant le symbole dièse (#) et en le remplaçant par le symbole de l'astérisque (*) accompagné de l'adresse IP attribuée à l'ordinateur.
+2. dans &lt;VirtualHost&gt;, remplacez l'astérisque (*) par l'adresse IP du serveur. Remplacez aussi ServerName par le nom d'un DNS valide assigné à l'ordinateur et configurez les autres directives selon les besoins par exemple **camaratek.com**.
+3. **ServerAdmin** attribuez le mail de l'administrateur.
+4. **DocumentRoot** indiquez la racine de votre site web c'est dire le dossier qui va contenir les fichiers de votre site web.
+5. **ServerName** bref le nom de domaine.
+6. **ErrorLog** le chemin de votre fichier log
+7. **LogLevel** les niveaux d'erreur qui vont être enrégistré dans lefichier de log.
+
+Pour allez plus loin
+[Hôte virtuel sécurisé](http://httpd.apache.org/docs/2.0/ssl/ssl_intro.html)
+[Création d'un hôte virtuel sur VPS 1](https://github.com/camara94/adminVPS#administrer-un-serveur-vps)
+[Création d'un hôte virtuel sur VPS 2](http://web.mit.edu/rhel-doc/4/RH-DOCS/rhel-rg-fr-4/s1-apache-virtualhosts.html)
+
+
