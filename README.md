@@ -102,3 +102,5 @@ Pour allez plus loin
 <code>apt-get install mysql-server mysql-client</code>
 pour configurer mysql, on se rend dans le fichier
 <code>vi  mysql.conf.d/mysqld.cnf</code>
+pour modifier user et son mot de password
+<code> sudo vi /etc/mysql/debian.cnf</code>
