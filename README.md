@@ -94,8 +94,11 @@ il y a une commande **a2ensite** pour dire *appache2 enable site* qui permet d'a
 <code> service apache2 reload</code>
 
 Pour allez plus loin
-[Hôte virtuel sécurisé](http://httpd.apache.org/docs/2.0/ssl/ssl_intro.html)
-[Création d'un hôte virtuel sur VPS 1](https://github.com/camara94/adminVPS#administrer-un-serveur-vps)
-[Création d'un hôte virtuel sur VPS 2](http://web.mit.edu/rhel-doc/4/RH-DOCS/rhel-rg-fr-4/s1-apache-virtualhosts.html)
+[Hôte virtuel sécurisé](http://httpd.apache.org/docs/2.0/ssl/ssl_intro.html)<br/>
+[Création d'un hôte virtuel sur VPS 1](https://github.com/camara94/adminVPS#administrer-un-serveur-vps)<br />
+[Création d'un hôte virtuel sur VPS 2](http://web.mit.edu/rhel-doc/4/RH-DOCS/rhel-rg-fr-4/s1-apache-virtualhosts.html)<br/>
 
-
+## Installer MYSQL
+<code>apt-get install mysql-server mysql-client</code>
+pour configurer mysql, on se rend dans le fichier
+<code>vi  mysql.conf.d/mysqld.cnf</code>
