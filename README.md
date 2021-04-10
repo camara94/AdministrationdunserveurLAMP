@@ -30,3 +30,21 @@ Après avoir installer apache, voici quelques commandes à connaître pour manip
         ps -aux | grep apache[2]
     </pre>
 </code>
+
+### Configuration d'apache en Linux
+En Linux les fichiers de configurations se trouve dans le dossier **/etc/** et plus particulièrement celui d'apache se trouve dans **/etc/apach2**
+<code>
+    <pre>
+        cd /etc/apache2
+        ls -l
+    </pre>
+</code>
+![apache2](1.png)
+
+#### Modification de httpd.conf
+Pour modification **httpd.conf**, je crée et copie d'abord son contenu dans le fichier httpd.conf.save avec la commande 
+<code>cv httpd.conf httpd.conf.save</code>  
+
+### pour mieux gérer son serveur ubuntu
+on va installer etckeeper et logwatch au fait etckeeper, nous permet de versionner l'etat de notre serveur ce qui nous permet de revenir à l'etat precedent à tout moment c'est à dire on pourra faire des commit vraiment c'est outil très pratique
+<code>apt install etckeeper</code>
