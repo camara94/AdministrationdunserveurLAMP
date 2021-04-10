@@ -70,7 +70,7 @@ L'exemple de l'hôte virtuel offert se présente de la manière suivante :
     </pre>
 </code>
 
-1. décommentez la ligne NameVirtualHost en retirant le symbole dièse (#) et en le remplaçant par le symbole de l'astérisque (*) accompagné de l'adresse IP attribuée à l'ordinateur.
+1. décommentez la ligne NameVirtualHost en retirant le symbole dièse (#) et en le remplaçant par le symbole(avec les version inférieur à 2.4) de l'astérisque (*) accompagné de l'adresse IP attribuée à l'ordinateur.
 2. dans &lt;VirtualHost&gt;, remplacez l'astérisque (*) par l'adresse IP du serveur. Remplacez aussi ServerName par le nom d'un DNS valide assigné à l'ordinateur et configurez les autres directives selon les besoins par exemple **camaratek.com**.
 3. **ServerAdmin** attribuez le mail de l'administrateur.
 4. **DocumentRoot** indiquez la racine de votre site web c'est dire le dossier qui va contenir les fichiers de votre site web.
