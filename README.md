@@ -88,6 +88,11 @@ L'exemple de l'hôte virtuel offert se présente de la manière suivante :
         </pre>
     </code>
 
+### Pour activer le site
+il y a une commande **a2ensite** pour dire *appache2 enable site* qui permet d'activer le site.
+<code>a2ensite dummy-host.example.com</code> puis
+<code> service apache2 reload</code>
+
 Pour allez plus loin
 [Hôte virtuel sécurisé](http://httpd.apache.org/docs/2.0/ssl/ssl_intro.html)
 [Création d'un hôte virtuel sur VPS 1](https://github.com/camara94/adminVPS#administrer-un-serveur-vps)
