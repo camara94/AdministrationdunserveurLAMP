@@ -99,8 +99,8 @@ Pour allez plus loin
 [Création d'un hôte virtuel sur VPS 2](http://web.mit.edu/rhel-doc/4/RH-DOCS/rhel-rg-fr-4/s1-apache-virtualhosts.html)<br/>
 
 ## Installer MYSQL
-<code>apt-get install mysql-server mysql-client</code>
+<code>apt-get install mysql-server mysql-client</code><br/>
 pour configurer mysql, on se rend dans le fichier
-<code>vi  mysql.conf.d/mysqld.cnf</code>
+<code>vi  mysql.conf.d/mysqld.cnf</code><br/>
 pour modifier user et son mot de password
 <code> sudo vi /etc/mysql/debian.cnf</code>
